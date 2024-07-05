@@ -1,0 +1,41 @@
+&CONTROL
+   calculation      = 'relax'
+   verbosity        = 'low'
+   nstep            = 200
+   tstress          = .true.
+   tprnfor          = .true.
+   outdir           = './qe/'
+   prefix           = 'O2'
+   pseudo_dir       = './qe/ONCV/'
+/
+&SYSTEM
+   ecutwfc          = 80
+   occupations      = 'smearing'
+   degauss          = 0.025
+   nspin            = 2
+   starting_magnetization(1) = 0.16666666666666666
+   ntyp             = 1
+   nat              = 2
+   ibrav            = 0
+/
+&ELECTRONS
+/
+&IONS
+/
+&CELL
+/
+ATOMIC_SPECIES
+O  15.999 O_ONCV_PBE-1.0.upf
+
+K_POINTS automatic
+1 1 1  0 0 0
+
+CELL_PARAMETERS angstrom
+10.00000000000000 0.00000000000000 0.00000000000000
+0.00000000000000 10.00000000000000 0.00000000000000
+0.00000000000000 0.00000000000000 11.24595600000000
+
+ATOMIC_POSITIONS angstrom
+O  5.0000000000 5.0000000000 6.2459560000
+O  5.0000000000 5.0000000000 5.0000000000
+
